@@ -6,7 +6,8 @@ export interface Product {
     unitPrice: number;
     imageUrl: string;
     active: boolean;
-    UnitInStock: number;
+    unitInStock: number;
+    categoryId: number;
     dateCreated: string;
     lastUpdated: string;
 }

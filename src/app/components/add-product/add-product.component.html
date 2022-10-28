@@ -1,0 +1,24 @@
+<div class="main-content">
+    <div class="section-content section-content-p30">
+        <div class="container-fluid">
+            <h3>Add Product</h3>
+            <form #pdata="ngForm" (ngSubmit)="onSubmit(pdata)">
+                sku: <input type="text" name="sku" id="sku" required ngModel><br /><br />
+                name: <input type="text" name="name" id="name" required ngModel><br /><br />
+                description: <input type="text" name="description" id="description" ngModel><br /><br />
+                unitPrice: <input type="text" name="unitPrice" id="unitPrice" required ngModel><br /><br />
+                imageUrl: <input type="text" name="imageUrl" id="imageUrl" value="assets/images/products/placeholder.png" ngModel><br /><br />
+                active: True <input type="radio" name="active" id="active" value="true" ngModel> False <input type="radio" name="active" id="active" value="false" ngModel><br /><br />
+                unitsInStock: <input type="number" name="unitsInStock" id="unitsInStock" required ngModel><br /><br />
+                category:
+                        <select name="categoryId" ngModel>
+                            <option value="1">Books</option>
+                            <option value="2">Coffe mugs</option>
+                            <option value="3">Mouse Pads</option>
+                            <option value="4">Luggage</option>
+                        </select><br /><br />
+                <input type="submit" [disabled]="!pdata.valid" value="submit" />
+            </form>
+        </div>
+    </div>
+</div>
